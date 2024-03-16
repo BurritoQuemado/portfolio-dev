@@ -1,0 +1,25 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+    {
+        title: "Administrador de eventos",
+        description: "Aplicación web para administrar eventos con diferentes fechas, asi como sus asistentes y pasarles lista.",
+        date: "Enero 2023",
+    },
+    {
+        title: "Aplicación de subastas",
+        description: "Aplicación web para conseguir puntos con diferentes actividades para despues usarlos en una subasta.",
+        date: "Diciembre 2023",
+    }
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {
+        EXPERIENCE.map( (experiencie) => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {... experiencie} />
+            </li>
+        ))
+    }              
+</ol>
+

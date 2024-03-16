@@ -1,18 +1,32 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Badge from '../components/Badge.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import MailIcon from "../components/icons/Mail.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout 
+	title="Portfolio Diego Flores - Desarrollador y Programador Web"
+	description="Desarrollador y Programador Web Jr, con mas de 3 años de experiencia"
+	>
 	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44 ">
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+		<SectionContainer>
+			<img 
+				class="rounded-full size-16" 
+				src="https://avatars.githubusercontent.com/u/26553908?s=400&u=dbcd83ba3a75f6bb2a0723daec25f37dca984585&v=4" 
+				alt="diego"
+				/>
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 py-4">
 				Hola, soy Diego Flores <a 
 				class="flex justify-center items-center"
 				href="https://www.linkedin.com/in/dafloresm"
 				target="_blank"
-				rel="noop"
+				rel="noopener noreferrer"
 				>
 					<Badge>Disponible para trabajar</Badge>
 				</a>
@@ -21,13 +35,27 @@ import Badge from '../components/Badge.astro';
 				+3 años de experiencia. Desarrollador Web y Mobile. De Ciudad de México, 
 				México 🇲🇽. Especializado en soluciones impresionantes y a la medida.
 			</h2>
-			<ul>
-				<li>
-					<a href="https://www.linkedin.com/in/dafloresm">
-						Linked In
-					</a>
-				</li>
-			</ul>
-		</section>
+			<nav class="flex gap-x-4">
+				<SocialPill href="https://www.linkedin.com/in/dafloresm">
+					<LinkedInIcon class="size-8" />
+					Linked In
+				</SocialPill>
+				<SocialPill 
+					href="https://www.github.com/burritoquemado"
+					>
+					<GithubIcon class="size-8" />
+					Github
+				</SocialPill>
+				<SocialPill
+					href="mailto:dfmonroy07@gmail.com"
+					>
+					<MailIcon class="size-8" />
+					Email
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+		<SectionContainer>
+			<Experience />
+		</SectionContainer>
 	</main>
 </Layout>
