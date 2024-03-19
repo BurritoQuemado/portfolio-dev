@@ -2,21 +2,50 @@
 import ExperienceItem from "./ExperienceItem.astro"
 const EXPERIENCE = [
     {
-        title: "Administrador de eventos",
-        description: "Aplicación web para administrar eventos con diferentes fechas, asi como sus asistentes y pasarles lista.",
-        date: "Enero 2023",
+        title: "Ingeniero de Software",
+        company: "Polar Multimedia",
+        description: `Ingeniero responsable del diseño e implementación de
+        herramientas para generación de códigos QR, scripts, y contraseñas
+        seguras personalizadas con Python.
+        Líder responsable del diseño, desarrollo, testeo, remediación e
+        implementación de aplicaciones de realidad aumentada y virtual
+        para móviles con Vuforia y Unity.
+        Ingeniero a cargo del diseño, preparación y presentación de demos,
+        mockups y experiencias de usuario para aplicaciones web y móviles,
+        así como del mantenimiento, actualización y mejora de aplicaciones
+        y herramientas en producción.
+        Preparación, validación y configuración de ambientes de pruebas y
+        producción, durante el desarrollo e implementación de aplicaciones
+        web y móviles, interactivas para el área de marketing médico.
+        Técnico responsable del mantenimiento de los equipos de
+        computo.`,
+        date: "2020 - a la fecha",
     },
     {
-        title: "Aplicación de subastas",
-        description: "Aplicación web para conseguir puntos con diferentes actividades para despues usarlos en una subasta.",
-        date: "Diciembre 2023",
+        title: "Desarrollador de Software",
+        company: "Polar Multimedia",
+        description: `Líder técnico responsable del desarrollo y mantenimiento de
+        páginas web y landing pages en Wix.
+        Desarrollador responsable de implementar estilos, actualizaciones y
+        corrección de errores de las páginas web y aplicaciones móviles.`,
+        date: "2018 - 2019",
+    },
+    {
+        title: "Soporte Técnico",
+        company: "Outsourcing",
+        description: `Responsable de soporte técnico:
+        Actualización de software y sistemas operativos; instalación de
+        herramientas de seguridad, limpieza y mantenimiento de equipos
+        de cómputo y soporte de redes.`,
+        date: "2019 - 2020"
+
     }
 ]
 ---
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
+<ol class="relative mt-16">
     {
         EXPERIENCE.map( (experiencie) => (
-            <li class="mb-10 ms-4">
+            <li class="ms-4">
                 <ExperienceItem {... experiencie} />
             </li>
         ))
