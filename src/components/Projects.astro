@@ -2,6 +2,9 @@
 import GitHub from "./icons/Github.astro"
 import Python from "./icons/Python.astro"
 import Tailwind from "./icons/Tailwind.astro"
+import ReactJS from "./icons/ReactJS.astro"
+import NodeJS from "./icons/NodeJS.astro"
+import JavaScript from "./icons/Javascript.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
@@ -11,6 +14,26 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#4584b6] text-[#ffde57]",
+    icon: Python,
+  },
+  REACTJS: {
+    name: "ReactJS",
+    class: "bg-[#00d8ff] text-white",
+    icon: ReactJS,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#f7df1e] text-white",
+    icon: JavaScript,
+  },
+  NODEJS: {
+    name: "NodeJS",
+    class: "bg-[#6cc24a] text-white",
+    icon: NodeJS,
+  }
 }
 const PROJECTS = [
   {
@@ -20,8 +43,22 @@ const PROJECTS = [
     link: "https://registropolar.com/",
     github: "https://github.com/PolarMultimedia/events-attendees-management",
     image: "/projects/admineventos.webp",
-    tags: [TAGS.TAILWIND],
+    tags: [TAGS.TAILWIND, TAGS.REACTJS, TAGS.JAVASCRIPT, TAGS.NODEJS],
   },
+  {
+    title: "Polar Multimedia - Activacion para stands/eventos",
+    description: "Sitio web en el cual se hacen diferentes tipos de preguntas, o incluso escaneo de códigos QR para activaciones en eventos o stands de clientes",
+    github: "https://github.com/BurritoQuemado/subasta-stands-frontend",
+    image: "/projects/activacion.webp",
+    tags: [TAGS.TAILWIND, TAGS.REACTJS, TAGS.JAVASCRIPT, TAGS.NODEJS]
+  },
+  {
+    title: "Polar Multimedia - Album digital",
+    description: "Sitio web el cual es un album digital en el cual se va llenando con cartas que se reciben diariamente por correo electronico, estas dependen de su rareza y su oleada.",
+    github: "https://github.com/BurritoQuemado/album-digital",
+    image: "/projects/album.webp",
+    tags: [TAGS.PYTHON, TAGS.JAVASCRIPT]
+  }
 ]
 ---
 
@@ -31,7 +68,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt={title} class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
